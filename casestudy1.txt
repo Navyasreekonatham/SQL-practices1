@@ -1,0 +1,62 @@
+1.	TABLE 1
+               1. table admin(
+                adminid  -----------(PK)
+                adminname 
+                admin 
+                 constraint pk_adminid primary key (adminid)
+                 )
+				 
+				 primary key---adminid
+
+2.  TABLE 2
+	            2. table task(
+                   taskid ------------------(PK)
+                   taskname 
+                   taskstatus 
+                   priority 
+                   notes 
+                   bookmark 
+				   adminid
+                   constraint pk_task primary key (taskid),
+                   constraint fk_adminid foreign key (adminid) references admin (adminid)
+                   )
+				   
+				   primary key----taskid
+                   foregin key----adminid				   
+		  
+3.  TABLE 3
+        		  
+                3. table  emp
+				
+				   empid--------(PK)
+				   empname
+				   adminid-----(fk)
+				   taskid-----(fk)
+				   constraint pk_emp primary key (empid),
+                   constraint fk_adminid foreign key (adminid) references admin (adminid)
+				   constraint fk_taskid foreign key (taskid) references task (taskid)
+                   )
+				   
+				   primary key-----empid
+				   foregin key----adminid
+				   foregin key----taskid
+                   
+				   
+				   
+ 4. TABLE 4     
+                
+				4. table notes
+ 
+                notesid------(pk)
+                taskid----(FK)
+                adminid-----(fk)
+                notesdetailes
+				constraint pk_notes primary key (notesid),
+                constraint fk_taskid foreign key (taskid) references task (taskid)
+				constraint fk_adminid foreign key (adminid) references admin (adminid)
+                   )
+				   
+				   primay key----notesid
+				   foregin key---taskid
+				   foregin key---adminid
+				
