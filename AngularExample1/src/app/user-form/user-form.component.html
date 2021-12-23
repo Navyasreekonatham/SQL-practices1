@@ -1,0 +1,75 @@
+<form #formRef="ngForm" (ngSubmit)="sendData()">
+    <div class="form-group">
+         
+            <label for="user_id">User ID:</label>
+            <input type="text" class="form-control" id="user_ID" name="user_ID" [(ngModel)] ="user_ID">
+
+    </div>
+    
+
+    <div class="form-group">
+        <label for="username">User Name:</label>
+        <input type="text" class="form-control" id="username"   name ="username" [(ngModel)]="username">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email"   name="email" [(ngModel)]="email">
+        
+    </div>
+    <div class="form-group">
+        <label for="first_Name">First Name</label>
+        <input type="text" id="first_Name"  class="form-control"  name="firstName" [(ngModel)]="first_Name">
+    </div>
+    <div class="form-group">
+        <label for="last_Name">Last Name</label>
+        <input type="text" class="form-control" id="last_Name" name="lastName"  [(ngModel)]="last_Name">
+    </div>
+
+    <div class="form-group">
+        <label for="contact_Number">Contact Number</label>
+        
+        <input type="number" class="form-control" id="contact_Number" name="contact_Number"  [(ngModel)]="contact_Number">
+    </div>
+
+    <div class="form-group">
+        <label for="role">Role</label>
+        <input type="text" class="form-control" id="role" name="role"  [(ngModel)]="role">
+    </div>
+
+    
+    
+    <div class="form-group">
+        <label for="dOB">Date Of Birth</label>
+        <input type="text" class="form-control" id="dOB"  name="dOB" [(ngModel)]="dOB">
+        
+    </div><br/>
+    <div>
+
+        <div class="form-group">
+            <label for="createdon">CreatedOn</label>
+            <input type="text" class="form-control" id="createdOn"   name="createdOn" [(ngModel)]="createdOn">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="text" class="form-control" id="password"  name="password" [(ngModel)]="password">
+        </div>
+
+        <div class="form-group">
+            <label for="active">ISACTIVE</label>
+            <select name="" id="active" class="form-select"  name="active" [(ngModel)]="active">
+                <option value="">-------choose your option--------</option>
+                <option value="true">TRUE</option>
+                <option value="false">FALSE</option>
+                
+            </select>
+    
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+    </form>
+    
+
+

@@ -1,0 +1,78 @@
+
+<form #formRef="ngForm" (ngSubmit)="sendData()">
+    <div class="form-group">
+         
+    Task ID:   
+        <input type="text" class="form-control" id="task_ID" name="task_ID" [(ngModel)] ="task_ID"><br/>
+    </div>
+    <div class="form-group">
+    Owner ID:   
+        <input type="text" class="form-control" id="owner_ID"  name="owner_ID" [(ngModel)]="owner_ID"><br/>
+    </div>
+
+    <div class="form-group">
+    Creator ID: 
+        <input type="text" class="form-control" id="creator_ID"   name ="creator_ID" [(ngModel)]="creator_ID"><br/>
+    </div>
+
+    <div class="form-group">
+    Name:   
+        <input type="text" class="form-control" id="name"   name="name" [(ngModel)]="name"><br/>
+        
+    </div>
+    <div class="form-group">
+    Description:   
+        <textarea name="" id="description" cols="30" rows="2" class="form-control"  name="description" [(ngModel)]="description"></textarea><br/>
+    </div>
+    <div class="form-group">
+        <label for="status">Status:  </label>
+        <input type="text" class="form-control" id="status" name="status"  [(ngModel)]="status"><br/>
+    </div>
+
+    <div class="form-group">
+        <label for="priority">Priority:  </label>
+        <select name="" id="status" class="form-select" name="priority"  [(ngModel)]="priority"><br/>
+            <option value="">-------choose the priority--------</option>
+            <option value="HIGH">HIGH</option>
+            <option value="LOW">LOW</option>
+            <option value="MEDIUM">MEDIUM</option>
+        </select>
+
+    </div>
+    <div class="form-group">
+    Notes:   
+        <input type="text" class="form-control" id="notes" name="notes"  [(ngModel)]="notes"><br/>
+    </div>
+    <div class="form-group">
+    isbookmarked:  
+        <select name="" id="isBookmarked" class="form-select"  name="isBookmarked" [(ngModel)]="isBookmarked"><br/>
+            <option value="">-------choose your option--------</option>
+            <option value="true">TRUE</option>
+            <option value="false">FALSE</option>
+            
+        </select>
+
+    </div>
+       
+   <div class="form-group" >
+    createdon:   
+        <input type="text" class="form-control" id="created_On"  name="created_On" [(ngModel)]="created_On"><br/>
+        <div class="form-group">
+    StatusChangedOn:   
+        <input type="text" class="form-control" id="status_Changed_On"   name="status_Changed_On" [(ngModel)]="status_Changed_On"><br/>
+        </div>
+
+        user_ID:   
+        <input type="text" class="form-control" id="user_ID"  name="user_ID" [(ngModel)]="user_ID"><br/>
+        <div class="form-group">
+        </div>    
+
+
+
+
+
+    </div><br/>
+    <div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+    </form>

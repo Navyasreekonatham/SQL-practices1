@@ -1,0 +1,43 @@
+<div class="CommentBox" >
+    <div class="card">
+        <div class="card-head">
+                
+                <h4 class="bg-secondary text-center text-white">SEARCH TASK</h4>
+            
+        </div>
+        <div class="card-body">
+            <div class="row text-center"></div>
+            <div class="col-md-3 text-center my-auto"></div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    
+    Task ID :
+    <input type="number" name="task_ID" formControlName="task_ID" />
+    <br/>
+    <br/>
+
+  
+
+    <button type = "button" class= "btn btn-success"(click)="onSubmit(form.value)">Search</button>  <br/><br/>  
+</form>
+
+<div *ngFor ="let task of tasks">
+    <h3>TASK DETAILS</h3>
+    Task-ID:{{task.task_ID}} <br/>
+    Owner-ID:{{task.owner_ID}}<br/>
+    Creator-ID:{{task.creator_ID}}<br/>
+    Name:{{task.name}}<br/>
+    Description:{{task.description}}<br/>
+    Status:{{task.status}}<br/>
+    Priority:{{task.priority}}<br/>
+    Notes:{{task.notes}}<br/>
+    IsBookmarked:{{task.isBookmarked}}<br/>
+    Created-on:{{task.created_On}}<br/>
+    Status-changed-on:{{task.status_Changed_On}}<br/><br>
+
+
+    
+
+</div>
+
+<a routerLink="/ADMIN" class="btn btn-secondary">HOME</a>

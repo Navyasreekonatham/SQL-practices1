@@ -1,0 +1,13 @@
+<p>search by status,priority,ownerid</p>
+<div>
+    <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term">
+    
+    
+    <h2>Task Detail</h2>
+    <ul *ngFor="let task of tasks | filter:term">
+        <li>{{task.name}} - {{task.priority}} - {{task.description}} - {{task.status_Changed_On}} - {{task.status}}
+            - {{task.notes}} - {{task.creator_ID}} - {{task.task_ID}} - {{task.isBookmarked}} - {{task.owner_ID}} - {{task.created_On}}
+        </li>
+    </ul>
+</div>
+

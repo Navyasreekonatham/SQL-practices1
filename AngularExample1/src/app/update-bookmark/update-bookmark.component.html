@@ -1,0 +1,17 @@
+<p>update-bookmark works!</p>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    Task_ID :
+    <input type="number" name="task_ID" formControlName="task_ID"/>
+    <br/>
+    <br/>
+
+    IsBookmarked:
+   <input type="text"  name="isBookmarked" formControlName="isBookmarked"/>
+    <br/>
+    <br/>
+
+    <button type = "button" class= "btn btn-success"(click)="onSubmit(form.value)">Update</button>    
+</form>
+
+

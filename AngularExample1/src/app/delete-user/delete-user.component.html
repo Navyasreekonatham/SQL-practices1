@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    User ID :
+    <input type="number" name="user_ID" formControlName="user_ID"/>
+    <br/>
+    <br/>
+
+   
+
+    <button type = "button" class= "btn btn-success"(click)="onSubmit(form.value)">Delete</button>    
+</form>
+
+
